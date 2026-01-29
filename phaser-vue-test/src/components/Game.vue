@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
+import { onMounted, onUnmounted, useTemplateRef } from "vue";
 import Phaser from "phaser";
 
-const gameContainer = ref<HTMLDivElement | null>(null);
+const gameContainer = useTemplateRef<HTMLDivElement>("gameContainer");
 let gameInstance: Phaser.Game | null = null;
 
 // 1. PRELOAD: Load our two images into memory
